@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .menu{
+            list-style-type: none;
+            display: flex;
+            
+        }
+        .sous_menu ul{
+            display: none;
+        }
+        .sous_menu:hover ul{
+            display: block;
+        }
+        li{
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul class="menu">
+            <li >
+                <div class="sous_menu">
+                    <span>simo</span> 
+                    <div>
+                        <ul style="list-style-type: none;">
+                            <li>s2</li>
+                            <li>s2</li>
+                            <li>s2</li>
+                            <li>s2</li>
+                        </ul>
+                    </div>
+                </div>    
+            </li>
+            <li>tedom </li>
+            <li> prosper </li>
+        </ul>
+    </div>
+
+    <p id="r" style="margin-left: 0;">ttttttt</p>
+    <script>
+        let t=0;
+        function rappel() { 
+           // document.getElementById("r").style.marginLeft = 20;
+            t=t+30;
+            document.getElementById("r").innerHTML ="simo"
+            document.getElementById("r").style.marginLeft = t+"px";
+
+        }
+        setInterval(rappel, 1000);
+    </script>
+</body>
+</html>
